@@ -67,3 +67,5 @@ To execute **[Algorithm 1]** on **[Function Name 1]** for **[N]** iterations:
 
 ```bash
 python main.py --algorithm [algo_1_short_name] --function [func_1_short_name] --iterations [N]
+
+python run_comparison.py
