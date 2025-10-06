@@ -68,4 +68,24 @@ To execute **[Algorithm 1]** on **[Function Name 1]** for **[N]** iterations:
 ```bash
 python main.py --algorithm [algo_1_short_name] --function [func_1_short_name] --iterations [N]
 
+🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+Fork the repository.
+
+Create your feature branch (git checkout -b feature/NewAlgorithm).
+
+Commit your changes.
+
+Push to the branch.
+
+Open a Pull Request.
+
+📄 License
+Distributed under the [License Name, e.g., MIT] License. See the LICENSE file for more information.
+
+📧 Contact
+Sourabh Joshi - [Your Email Address]
+Project Link: https://github.com/sourabhjoshi01/BioInspired-Optimization-Comparison
+
 python run_comparison.py
