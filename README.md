@@ -1,6 +1,6 @@
 # Comparative Study of Bio-Inspired Optimization Algorithm
 
-## 🚀 Project Overview
+## Project Overview
 
 This project conducts a comprehensive comparative analysis of three fundamental metaheuristic optimization algorithms—**Genetic Algorithm (GA)**, **Differential Evolution (DE)**, and **Simulated Annealing (SA)**—on a set of standard mathematical benchmark functions. The analysis evaluates each algorithm's performance, robustness, and efficiency in finding the global minimum for both unimodal and multimodal search spaces.
 
@@ -8,7 +8,7 @@ The entire comparison is implemented in a single Python script designed for easy
 
 ---
 
-## 🛠️ Algorithms and Inspiration
+##  Algorithms and Inspiration
 
 | Algorithm | Type | Core Inspiration | Key Optimization Process |
 | :--- | :--- | :--- | :--- |
@@ -18,7 +18,7 @@ The entire comparison is implemented in a single Python script designed for easy
 
 ---
 
-## 📐 Benchmark Functions
+##  Benchmark Functions
 
 The algorithms are tested on two classic continuous optimization problems to assess their behavior in different search space topologies:
 
@@ -29,7 +29,7 @@ The algorithms are tested on two classic continuous optimization problems to ass
 
 ---
 
-## 💻 How to Run the Project
+##  How to Run the Project
 
 ### Prerequisites
 
@@ -56,7 +56,7 @@ The core comparison uses the following parameters:
 
 ---
 
-## 📊 Results Analysis
+## Results Analysis
 
 The comparative performance is judged using the following key metrics, summarized in the output table and charts:
 
