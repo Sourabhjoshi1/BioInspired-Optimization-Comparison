@@ -1,91 +1,79 @@
-# Comparative Study of Bio-Inspired Optimization Algorithms
+# Comparative Study of Bio-Inspired Optimization Algorithm
 
-## 🚀 Overview
+## 🚀 Project Overview
 
-This repository contains the source code and results for a comprehensive **comparative study of various bio-inspired metaheuristic algorithms** (e.g., Particle Swarm Optimization (PSO), Genetic Algorithms (GA), Grey Wolf Optimizer (GWO), etc.) when applied to a set of **standard benchmark mathematical functions**.
+This project conducts a comprehensive comparative analysis of three fundamental metaheuristic optimization algorithms—**Genetic Algorithm (GA)**, **Differential Evolution (DE)**, and **Simulated Annealing (SA)**—on a set of standard mathematical benchmark functions. The analysis evaluates each algorithm's performance, robustness, and efficiency in finding the global minimum for both unimodal and multimodal search spaces.
 
-The primary goal of this work is to **evaluate the performance** of these optimizers based on key metrics such as convergence speed, solution quality (minimum objective function value), and robustness (consistency across multiple runs).
-
----
-
-## 🔬 Algorithms Included
-
-The study includes implementations of the following bio-inspired algorithms:
-
-* **[Algorithm 1]** (e.g., Particle Swarm Optimization - PSO)
-* **[Algorithm 2]** (e.g., Genetic Algorithm - GA)
-* **[Algorithm 3]** (e.g., Grey Wolf Optimizer - GWO)
-* **[Algorithm 4]** (e.g., Ant Colony Optimization - ACO)
-* *...and any others you have implemented.*
+The entire comparison is implemented in a single Python script designed for easy execution in a Google Colaboratory environment.
 
 ---
 
-## 🎯 Benchmark Functions
+## 🛠️ Algorithms and Inspiration
 
-The algorithms are tested against a diverse set of well-known unimodal and multimodal benchmark functions to assess their **exploitation** and **exploration** capabilities.
-
-| Function | Type | Characteristics |
-| :--- | :--- | :--- |
-| **[Function Name 1]** | [Unimodal/Multimodal] | [e.g., Simple, steep gradient, single minimum] |
-| **[Function Name 2]** | [Unimodal/Multimodal] | [e.g., Highly multimodal, many local minima] |
-| **[Function Name 3]** | [Unimodal/Multimodal] | [e.g., Deceptive, non-separable] |
-| *...and any others you have used.* | | |
+| Algorithm | Type | Core Inspiration | Key Optimization Process |
+| :--- | :--- | :--- | :--- |
+| **Genetic Algorithm (GA)** | Evolutionary | Natural Selection and Genetics | Selection, Crossover, and Mutation. |
+| **Differential Evolution (DE)** | Evolutionary | Genetic Variation and Population-based Search | Mutation via vector difference, Crossover, and Selection. |
+| **Simulated Annealing (SA)** | Metaheuristic | Annealing in Metallurgy | Probabilistic acceptance of worse solutions to escape local optima. |
 
 ---
 
-## 🛠️ Installation and Setup
+## 📐 Benchmark Functions
+
+The algorithms are tested on two classic continuous optimization problems to assess their behavior in different search space topologies:
+
+| Function | Type | Characteristics | Key Test |
+| :--- | :--- | :--- | :--- |
+| **Sphere Function** | **Unimodal** | Simple, smooth, convex, with a single global minimum at $f(x)=0$. | **Exploitation Ability** (Convergence speed and precision). |
+| **Rastrigin Function** | **Multimodal** | Highly complex, many regularly distributed local minima surrounding the global minimum at $f(x)=0$. | **Exploration Ability** (Capacity to avoid local traps). |
+
+---
+
+## 💻 How to Run the Project
 
 ### Prerequisites
 
-* **[Language/Platform]** (e.g., Python 3.x)
-* **[Library 1]** (e.g., `numpy`)
-* **[Library 2]** (e.g., `scipy`)
-* **[Library 3]** (e.g., `matplotlib` for plotting results)
+The script requires the `deap` library, which is installed automatically within the Colab environment.
 
-### Installation Steps
+### Execution Steps
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [Your Repository URL]
-    cd [repository-name]
-    ```
+1.  **Create a New Colab Notebook:** Open Google Colaboratory and create a new Python notebook.
+2.  **Paste the Code:** Copy and paste the entire Python script into the first code cell.
+3.  **Run:** Execute the cell (Shift + Enter).
 
-2.  **Install the required dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    # OR
-    pip install numpy scipy matplotlib
-    ```
+The script will automatically install dependencies, run the experiments, calculate the statistics over multiple runs, and generate performance charts.
+
+### Experiment Configuration
+
+The core comparison uses the following parameters:
+
+| Parameter | Value | Metric |
+| :--- | :--- | :--- |
+| **Dimensionality ($D$)** | 10 | Number of variables (search space size). |
+| **Max Iterations** | 100 | Maximum generations/steps. |
+| **Population Size**| 20 | Number of search agents per algorithm. |
+| **Number of Runs** | 10 | Independent repetitions to ensure statistically robust averages. |
 
 ---
 
-## 🏃 Usage
+## 📊 Results Analysis
 
-### 1. Running a Single Algorithm on a Function
+The comparative performance is judged using the following key metrics, summarized in the output table and charts:
 
-To execute **[Algorithm 1]** on **[Function Name 1]** for **[N]** iterations:
+| Metric | Goal | Interpretation |
+| :--- | :--- | :--- |
+| **Avg. Final Value** | **Minimize** (closer to 0.0) | The average quality of the solution found. |
+| **Std. Final Value** | **Minimize** | Measures the **Robustness** and consistency of the algorithm across multiple runs. |
+| **Avg. Runtime (s)** | Minimize | Wall-clock time taken for execution. |
+| **Avg. NFEV** | Minimize | **Number of Function Evaluations** (computational cost). |
 
-```bash
-python main.py --algorithm [algo_1_short_name] --function [func_1_short_name] --iterations [N]
+The generated plots visually compare the algorithms' performance (Avg. Final Value on a log scale) and efficiency (Avg. Runtime) for both benchmark functions.
 
-🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-Fork the repository.
 
-Create your feature branch (git checkout -b feature/NewAlgorithm).
-
-Commit your changes.
-
-Push to the branch.
-
-Open a Pull Request.
-
-📄 License
-Distributed under the [License Name, e.g., MIT] License. See the LICENSE file for more information.
 
 📧 Contact
-Sourabh Joshi - [Your Email Address]
+Sourabh Joshi
 Project Link: https://github.com/sourabhjoshi01/BioInspired-Optimization-Comparison
 
 python run_comparison.py
